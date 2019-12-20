@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
-import "../assets/images/cover-img.jpg";
+import "../assets/images/cover.png";
 import {
   Wrapper,
   Article,
@@ -31,7 +31,7 @@ const Home = ({ history }) => {
         setAnimateAbout(false);
       }, 400);
   }, [animateWork, animateAbout, history]);
-  const background = require("../assets/images/cover-img.jpg");
+  const background = require("../assets/images/cover.png");
   return (
     <Wrapper>
       <WorkLink onClick={() => setAnimateWork(true)} animating={animateWork}>
@@ -41,15 +41,14 @@ const Home = ({ history }) => {
         <AboutText>About</AboutText>
       </AboutLink>
       <Article>
-        <Title>Hello There.</Title>
+        <Title>Dev Ops</Title>
         <Caption>
-          The name's <Emphasis>Hayo Friese</Emphasis>, web developer and student
-          extraordinaire*.
+          Mi nombre es <Emphasis>Delfin Roc</Emphasis>, Ingeniero de Telecomunicaciones, aprendiendo desarrollo web y tecnicas de cloud computing.
         </Caption>
       </Article>
       <Article>
         <CoverSheet />
-        <CoverImg src={background} alt="Hayo Cover Photo" />
+        <CoverImg src={background} alt="Delfin Cover Photo" />
       </Article>
     </Wrapper>
   );
